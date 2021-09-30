@@ -9,7 +9,7 @@
       "date": "16 сентября 2021",
       "image": "1.png",
       "isLiked": false,
-      "like": 49
+      "like": 50
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "date": "19 сентября 2020",
       "image": "1.png",
       "isLiked": false,
-      "like": 6
+      "like": 8
     },
     {
       "id": 3,
@@ -75,7 +75,7 @@
       "date": "10 сентября 2019",
       "image": "1.png",
       "isLiked": false,
-      "like": 4
+      "like": 5
     }
   ]
 }

@@ -1,5 +1,5 @@
 <template>
-  <span class="Heart"> <i :class="likeClass"></i> {{ quantityLike }} </span>
+  <button class="Like"><i :class="likeClass"></i> {{ quantityLike }}</button>
 </template>
 
 <script>
@@ -21,21 +21,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.Heart {
-  font-size: 12px;
-  color: #909599;
-  .active {
-    color: #eb5757;
-  }
-  .far,
-  .fas {
-    padding-right: 5px;
-    cursor: pointer;
-  }
-  i:hover {
-    color: #eb5757;
-  }
-}
-</style>
