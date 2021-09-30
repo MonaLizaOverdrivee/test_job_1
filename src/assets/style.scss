@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,300&display=swap");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+button {
+  font-family: inherit;
+  border: 0;
+  &.Tag {
+    padding: 8px 10px;
+    background: #8dbe50;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+      background: #709541;
+    }
+  }
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: #e5e5e5;
+}
+
+.Article__date {
+  color: #909599;
+  font-size: 13px;
+  font-weight: 300;
+}
+.Article__description {
+  margin-top: 28px;
+  font-size: 15px;
+  font-weight: 400;
+}
+#app {
+  margin-top: 60px;
+}
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px;
+}

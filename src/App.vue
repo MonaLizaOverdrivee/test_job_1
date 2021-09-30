@@ -1,27 +1,13 @@
 <template>
-  <main class="container">
+  <main>
     <router-view />
   </main>
 </template>
 
 <script>
-// import HelloWorld from "./Views/Home";
-
 export default {
-  name: "App",
-  components: {
-    // HelloWorld,
+  mounted() {
+    this.$nextTick(() => this.$store.dispatch('article/getArticles'));
   },
 };
 </script>
-
-<style lang="scss">
-#app {
-  margin-top: 60px;
-}
-main {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-</style>

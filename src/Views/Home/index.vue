@@ -5,19 +5,12 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 import ArticleCard from "@/components/ArticleCard";
 export default {
   components: { ArticleCard },
-  props: {},
   computed: {
     ...mapGetters("article", ["articles"]),
-  },
-  methods: {
-    ...mapActions("article", ["getArticles"]),
-  },
-  mounted() {
-    this.$nextTick(() => this.getArticles());
   },
 };
 </script>

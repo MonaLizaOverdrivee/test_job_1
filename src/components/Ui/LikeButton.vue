@@ -14,16 +14,10 @@ export default {
       default: false,
     },
   },
-  data() {
-    return {};
-  },
   computed: {
     likeClass() {
       return this.isLiked ? "fas fa-heart active" : "far fa-heart";
     },
-  },
-  methods: {
-    clickOnLike() {},
   },
 };
 </script>
@@ -35,7 +29,8 @@ export default {
   .active {
     color: #eb5757;
   }
-  .far, .fas {
+  .far,
+  .fas {
     padding-right: 5px;
     cursor: pointer;
   }
