@@ -27,14 +27,7 @@ export default {
   actions: {
     async getArticles({ commit }) {
       let { data } = await api.article.loadArticles();
-      data = data.reduce((acc, itm) => {
-        acc[itm.id] = itm;
-        if(localStorage.likes){
-          acc[itm.id].like = JSON.parse(localStorage.likes)[itm.id].like
-          acc[itm.id].isLiked = JSON.parse(localStorage.likes)[itm.id].isLiked
-        }
-        return acc;
-      }, {});
+      data = use.responseParse(data)
       commit("SET_ARTICLES", data);
     },
     async incrementLike({ commit, state }, id) {

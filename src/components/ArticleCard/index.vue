@@ -1,5 +1,5 @@
 <template>
-  <article class="Article">
+  <article class="Article" @click="$router.push('/' + articleData.id)">
     <img src="@/assets/1.png" alt="" />
     <h2 class="Article__title">{{ articleData.name }}</h2>
     <p class="Article__description">{{ articleData.description }}</p>
@@ -8,7 +8,7 @@
       <LikeButton
         :quantityLike="articleData.like"
         :isLiked="articleData.isLiked"
-        @click="clickOnLike(articleData.isLiked, articleData.id)"
+        @click.stop="clickOnLike(articleData.isLiked, articleData.id)"
       />
     </div>
   </article>
@@ -39,6 +39,10 @@ export default {
   padding: 10px;
   background: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
+  &:hover .Article__title {
+    text-decoration: underline;
+  }
   .Article__title {
     margin-top: 21px;
     font-size: 18px;
@@ -64,6 +68,11 @@ export default {
     width: 100%;
     object-fit: cover;
     border-radius: 4px;
+  }
+  @media(max-width: 400px) {
+    img {
+      height: 150px;
+    }
   }
 }
 </style>
